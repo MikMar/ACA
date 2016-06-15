@@ -1,0 +1,42 @@
+.body{
+font-size: 12px;
+    overflow-x: hidden;
+}
+
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+
+    display: flex;
+    align-items: center;
+}
+
+
+
+.diagram{
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    height: 300px;
+    margin-bottom: 30px;
+
+}
+
+.input-group input{
+    width: 25%!important;
+
+}
+
+.input-group{
+    margin: 0 auto!important;
+}
+
+.my-btn{
+    margin: 15px;
+}
+
+.my-q{
+    width: 20%;
+    background-color: mediumblue;
+    display: inline-block;
+    margin: 0px 20px;
+}

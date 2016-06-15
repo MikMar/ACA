@@ -1,0 +1,54 @@
+.body{
+font-size: 12px;
+    overflow-x: hidden;
+}
+
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+
+    display: flex;
+    align-items: center;
+}
+
+
+.red{
+    background-color: red;
+}
+
+.green{
+    background-color: green;
+}
+
+.input-group{
+    margin: 50px auto;
+
+}
+
+.my-input{
+    width: 100%;
+    border-radius: 5px!important;
+}
+
+.cell{
+    border-radius: 5px;
+    padding: 0px;
+    margin: 0px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+
+}
+
+button{
+    margin-bottom: 20px;
+}
+
+.container-fluid{
+    margin-top: 10px;
+}
+
+.move{
+	font-size: 20px;
+}

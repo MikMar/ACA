@@ -1,0 +1,293 @@
+@font-face {
+    font-family: "Archangelsk";
+    src: url(/fonts/Archangelsk font.ttf);
+}
+
+
+body{
+    margin:0;
+}
+
+
+.bgImage{
+    background-image:url(../img/7ddc_4e8f.png);
+    width:500px;
+    height:600px;
+    margin-top:34px;
+    float:left;
+    background-position:right;
+    border-bottom-left-radius:30px;
+
+
+}
+
+
+.front{
+
+    width:  1020px;
+    height: 634px;
+    border-radius: 30px;
+    background-image:url("../img/logo_dark.png");
+    background-size: 100px 100px;
+    background-color: #063;
+    margin: 20px auto;
+    position: relative;
+}
+
+.chip{
+
+    width: 150px;
+    height: 150px;
+    border-radius: 30px;
+    border: 1px solid black;
+    background-color: #F1D743;
+    position: absolute;
+    left: 100px;
+    top: 200px;
+
+}
+
+.rect{
+    height:20px;
+    width:16px;
+    position:absolute;
+    left: 42px;
+    top: 265px;
+}
+
+.chipBox{
+
+    width: 49px;
+    height: 37px;
+    float:left;
+
+}
+
+.One{
+
+    border-right: 1px solid black;
+}
+
+.For{
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.Six{
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.Seven{
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.Nine{
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.Ten{
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.Twelve{
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+}
+
+.middleBox{
+    width: 50px;
+}
+
+.shadow{
+    text-shadow: 0 1px 0 #ccc,
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbb,
+    0 4px 0 #b9b9b9,
+    0 5px 0 #aaa,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);
+
+    font-family: "Archangelsk";
+
+}
+
+.numbers{
+    position:absolute;
+    left:100px;
+    top: 395px;
+    color: white;
+    font-size:60px;
+    height: 60px;
+    background: none;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding-left: 10px;
+    width: 890px;
+
+}
+
+.name{
+    position:absolute;
+    left: 100px;
+    bottom: 60px;
+    color: white;
+    font-size:50px;
+
+}
+
+.firstNumber{
+    position:absolute;
+    left:100px;
+    bottom:150px;
+    font-size:24px;
+    color: white;
+
+}
+
+.validText{
+    position:absolute;
+    left:350px;
+    bottom: 110px;
+    color:white;
+    font-size: 24px;
+    font-family:"Archangelsk";
+}
+
+.validNumbers{
+    position:absolute;
+    left: 500px;
+    bottom:110px;
+    color:white;
+    font-size: 60px;
+    font-family:"Archangelsk";
+
+}
+
+.rightConteiner{
+    width:400px;
+    text-align:right;
+    height: 100%;
+    float:right;
+    padding:30px;
+
+
+}
+
+.logo{
+    width:100%;
+    height:auto;
+
+}
+
+.rightText{
+    color:#093;
+    font-size:75px;
+    font-family: Vivaldi;
+    margin-top:20px;
+    margin-right:30px;
+}
+
+.master{
+    border: 1px solid white;
+    border-radius:70px;
+    width:250px;
+    height: 150px;
+    float: right;
+    padding:15px;
+    margin-top:0px;
+}
+
+.masterCard{
+    margin-top: 6px;
+    height:90%;
+    width: 80%;
+
+}
+
+.back{
+    width:  1020px;
+    height: 634px;
+    border-radius: 30px;
+    background-color: #063;
+    margin: 20px auto;
+    position: relative;
+}
+
+.box1{
+    width:980px;
+    padding:20px;
+    color:white;
+    text-align: right;
+
+}
+
+.box2{
+
+    width:100%;
+    height:150px;
+    background-color: black;
+}
+
+.box3{
+    height:100px;
+    margin-top:20px;
+    padding-left:20px;
+    padding-right:20px;
+    width:980px;
+
+}
+
+.cwc{
+    background-color:white;
+    width:700px;
+    text-align:right;
+    padding:20px;
+    font-size: 50px;
+    font-style:italic;
+    float:left;
+
+}
+
+.backLogo{
+
+    height:40px;
+    float:right;
+    padding-top: 10px;
+}
+
+.link{
+    float:right;
+    color:white;
+    padding-right:20px;
+    padding-top: 10px;
+}
+
+.box4{
+    padding-left:20px;
+    padding-right:20px;
+    width:980px;
+    heigh:300px;
+    text-align: left;
+    color:white;
+
+}
+
+.validity{
+
+    position: absolute;
+    color: red;
+
+    bottom: 140px;
+    right:100px;
+
+    font-size: 25px;
+}

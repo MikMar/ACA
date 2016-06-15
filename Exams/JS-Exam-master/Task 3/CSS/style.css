@@ -1,0 +1,21 @@
+.body{
+font-size: 12px;
+    overflow-x: hidden;
+}
+
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+
+    display: flex;
+    align-items: center;
+}
+
+.my-btn{
+    margin-top: 15px;
+    width: 100%;
+}
+
+.form-group input{
+    margin: 15px 0;
+}

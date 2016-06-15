@@ -1,0 +1,120 @@
+.body{
+font-size: 12px;
+    overflow-x: hidden;
+}
+
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+     /* These two lines are counted as one :-)       */
+
+    display: flex;
+    align-items: center;
+}
+
+
+.nav-conteiner {
+    padding: 0;
+    border-radius: 0;
+    margin: 0;
+}
+
+.navbar-inverse{
+    border-radius: 0;
+    height: inherit;
+}
+
+.nav-pills li{
+    border-radius: 0;
+    
+}
+
+.nav-stacked{
+    margin-bottom: 20px;
+
+}
+
+
+
+
+
+.nav li{
+    line-height: 18px;
+    padding: 0;
+    margin: 0;
+
+}
+
+.nav-pills li a {
+    border-radius: 0;
+
+}
+
+
+.sidebar{
+
+    height: 100%;
+    position: fixed;
+    background-color: #f5f5f5;
+    padding-right: 0;
+    padding-left: 0;
+    margin: 0;
+    width: inherit;
+    overflow-y: auto;
+}
+
+.circle{
+
+    width: 100%;
+    padding-top: 100%;
+    background-color: #777777;
+    border-radius: 50%;
+}
+
+.padding{
+    padding-right: 2.5%;
+    padding-left: 2.5%;
+    margin-bottom: 20px;
+}
+
+.navbar-brand{
+    padding: 0;
+}
+
+.brand-block{
+    padding: 15px 15px;
+    height: 51px;
+
+}
+
+
+.iconContainer{
+	margin: 2px 0;
+	background-color: lightgrey;
+	min-height:115px;
+	display:inline-block;
+	
+	padding:10px;
+	min-width:320px;
+
+
+}
+
+.iconContainer:hover{
+	background-color: #8000ff;
+	color: white;
+}
+
+.icon{
+	font-size:60px;
+	padding:10px;
+
+}
+
+h4 {
+	color: 	#8000ff;
+}
+
+.purple{
+    background-color: 	#8000ff;
+    color: white;
+}

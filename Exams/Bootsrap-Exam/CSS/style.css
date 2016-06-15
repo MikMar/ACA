@@ -1,0 +1,167 @@
+.body{
+font-size: 12px;
+    overflow-x: hidden;
+}
+
+.vertical-center {
+
+
+    display: flex;
+    align-items: center;
+}
+
+.white{
+    color: white!important;
+}
+
+.white:hover{
+    color: #18BC9C!important;
+}
+
+.navbar{
+    background-color: #2C3E50;
+    border-radius: 0;
+    height: 100px;
+    margin: 0;
+    border: none;
+}
+
+.navbar ul li:hover{
+    color: #18BC9C;
+}
+
+.navbar-brand{
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.navbar-fixed-top{
+    padding: 25px 0;
+}
+
+.navbar-collapse{
+    background-color: #2C3E50;
+    border-top: 1px solid transparent!important;
+}
+
+.navbar-collapse ul li{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.nav li a:focus{
+    background-color: #2C3E50;
+}
+
+.navbar-toggle{
+    background-color: #2C3E50!important;
+    border-color: #1a242f !important;
+}
+
+.navbar-toggle:hover{
+    background-color: #1a242f!important;
+}
+
+.icon-bar{
+    background-color: white!important;
+}
+
+
+.block-0{
+    padding-top: 200px;
+    background-color: #18BC9C;
+}
+
+.name{
+    padding-top: 30px;
+    font-size: 70px;
+    color: white;
+    font-weight: bold;
+}
+
+
+.star-container div{
+    display: inline-block;
+}
+
+.glyphicon-star{
+    font-size: 40px;
+    color: white;
+}
+
+.my-hr{
+    width: 100px;
+    height: 5px;
+    background-color: white;
+    margin: 22.5px;
+}
+
+.subname{
+    color: white;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 100px;
+}
+
+.block-1{
+    padding: 100px 0;
+}
+
+.block-1 .name{
+    font-size: 40px;
+    font-weight: bold;
+    color: #2C3E50;
+}
+
+.my-bg{
+    background-color: #2C3E50!important;
+}
+
+.my-color{
+    color: #2C3E50!important;
+}
+
+.img-container{
+    margin-bottom: 30px ;
+}
+
+.img-container img{
+    max-width: 400px;
+}
+
+
+
+@media (max-width: 767px) {
+    .navbar-fixed-top{
+        padding: 0;
+    }
+    .navbar{
+        height: inherit;
+    }
+
+    .navbar-brand{
+        font-size: 18px;
+        line-height: 18px;
+        padding-top: 16px;
+
+
+    }
+
+    .navbar-collapse ul li{
+        font-size: inherit;
+    }
+
+    .block-0{
+        padding-top: 100px;
+    }
+
+    .name{
+        font-size: 30px;
+    }
+
+    .subname{
+        font-size: 20px;
+    }
+
+}
