@@ -10,3 +10,12 @@ font-size: 12px;
     display: flex;
     align-items: center;
 }
+
+.yellow{
+    color: orange!important;
+    margin-left: 15px;
+}
+
+.btn{
+    margin: 20px 0!important;
+}
