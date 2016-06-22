@@ -26,29 +26,25 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
-            <h1 class="page-header">File manager</h1>
-            <form action="search.php" method="post">
-                <input type="text" class="form-control" placeholder="search in this directory" aria-describedby="basic-addon1">
-                <button class="btn btn-lg btn-default" type="submit">Search</button>
-            </form>
+            <h1 class="page-header">Search results</h1>
             <?php
+                include_once 'path.php';
 
-                define('ROOT', '/home/mikayel/Desktop/ACA/Daily/Day-19/test-directory');
+                $name = $_GET['name'];
+                $array = scanALL(ROOT . $path);
 
-                $path = $_POST['path'];
-                $array = scanAll($path);
-
-                echo '<pre>';
-                var_dump($array);
-                echo '</pre>';
-
-                function scanAll($string = ''){
-                    $temp = [];
-                    foreach ($temp as $key => $value){
+                function scanAll($string, $mainArray = []){
+                    global $name;
+                    $tempArray = scandir($string);
+                    foreach ($tempArray as $key => $value){
                         if ($value == '.' || $value == '..'){
                             continue;
                         }
-                        $tempString = ROOT . $string . '/' . $value;
+                        
+                        if (strpos($value, $name) !== false){
+                            $mainArray[$string . '/' . $value] = $value;
+                        }
+                        /*
                         if (is_dir($tempString)){
                             $nestedDirectory = scanAll($string . '/' .$value);
                             unset($temp[$key]);
@@ -57,21 +53,13 @@
                         }
                         $tempValue = $value;
                         unset($temp[$key]);
-                        $temp[$tempString] = $tempValue;
+                        $temp[$tempString] = $tempValue; */
                     }
-                    return $temp;
+                    return $mainArray;
                 }
-                $array = scandir(ROOT . $path);
-                foreach ($array as $key => $value){
-                    if (is_dir(ROOT . $path . '/' . $value)){
-                        echo '<a href="?path=' . $path . '/' . $value . '">' . $value . '<span class="glyphicon glyphicon-folder-open yellow"></span></a></br>';
-                    } else {
-                        echo $value . '</br>';
-                    }
-                }
+                include 'draw.php';
             ?>
         </div>
-        //3 hat tarber icon folder file img, search avelacnel mekel infon cuyc tal
     </div>
 </div>
 

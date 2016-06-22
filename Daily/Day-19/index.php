@@ -23,46 +23,46 @@
 </head>
 <body>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <h1 class="page-header">Day 19</h1>
-                <?php
-                    define('ROOT', '/home/mikayel/Desktop/ACA/Daily/Day-19/');
-                    echo '<pre>';
-                    var_dump(scanAll('test-directory'));
-                    echo '</pre>';
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="page-header">File manager</h1>
 
-                    function scanAll($string){
-                        $temp = scandir(ROOT . $string);
-                        foreach ($temp as $key => $value){
-                            if ($value == '.' || $value == '..'){
-                                unset($temp[$key]);
-                                continue;
-                            }
-                            if (is_dir(ROOT . $string . '/' . $value)){
-                                $nestedDirectory = scanAll($string . '/' .$value);
-                                unset($temp[$key]);
-                                $temp[$value] = $nestedDirectory;
-                            }
-                        }
-                        return $temp;
-                    }
-                ?>
+            <?php
+                include_once 'path.php';
+            ?>
+            <form enctype="multipart/form-data" method="POST" action="upload.php">
+                <input type="file" name="uploadFile" class="form-control" placeholder="search in this directory" aria-describedby="basic-addon1">
+                <input type="hidden" value="<?php echo ROOT . $path; ?>" name="path">
+                <button class="btn btn-lg btn-default" type="submit">Upload</button>
+            </form>
+            <form action="search.php" method="get">
+                <input type="text" name="name" class="form-control" placeholder="search in this directory" aria-describedby="basic-addon1">
+                <input type="hidden" name="path" value="<?php echo $path; // to send path ?>" >
+                <button class="btn btn-lg btn-default" type="submit">Search</button>
+            </form>
 
-            </div>
-
+            <?php
+                $array = scandir(ROOT . $path); // getting array with all files
+                foreach ($array as $key => $value){ // changing key to path of item
+                    $tempValue = $value;
+                    unset($array[$key]);
+                    $array[$value] = $value;
+                }
+                include 'draw.php';
+            ?>
         </div>
     </div>
+</div>
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!-- build
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    -->
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="JS/script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<!-- build
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+-->
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="JS/script.js"></script>
 </body>
 </html>
