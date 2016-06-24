@@ -31,11 +31,11 @@
                 include_once 'path.php';
 
                 $name = $_GET['name'];
-                $array = scanALL(ROOT . $path);
+                $array = scanALL($path);
 
                 function scanAll($string, $mainArray = []){
                     global $name;
-                    $tempArray = scandir($string);
+                    $tempArray = scandir(ROOT . $string);
                     foreach ($tempArray as $key => $value){
                         if ($value == '.' || $value == '..'){
                             continue;
@@ -44,20 +44,27 @@
                         if (strpos($value, $name) !== false){
                             $mainArray[$string . '/' . $value] = $value;
                         }
-                        /*
-                        if (is_dir($tempString)){
-                            $nestedDirectory = scanAll($string . '/' .$value);
-                            unset($temp[$key]);
-                            $temp[$tempString] = $nestedDirectory;
-                            continue;
+
+                        if (is_dir(ROOT . $string . '/' . $value)){
+                            $mainArray = array_merge(scanAll($string . '/' . $value), $mainArray);
                         }
-                        $tempValue = $value;
-                        unset($temp[$key]);
-                        $temp[$tempString] = $tempValue; */
                     }
                     return $mainArray;
                 }
-                include 'draw.php';
+            
+                foreach ($array as $key => $value){
+                    $tempTime = filectime(ROOT . $key);
+                    if (is_dir(ROOT . $key)){
+                        echo '<a href="http://localhost/Daily/Day-19/index.php?path=' . $key . '"><span class="glyphicon glyphicon-folder-open yellow"></span>' . $value . '</a> ' . date('F d Y H:i:s' ,$tempTime) .'</br>';
+                        continue;
+                    }
+                    if (strpos($value, 'jpg') || strpos($value, 'png') || strpos($value, 'gif')){
+                        echo '<a href="' . $key . '"><span class="glyphicon glyphicon-picture blue"></span>' . $value . '</a> ' . date('F d Y H:i:s' ,$tempTime) . '</br>';
+                        continue;
+                    }
+                    echo '<span class="glyphicon glyphicon-file red"></span>' . $value .  ' ' . date('F d Y H:i:s' ,$tempTime) .'</br>';
+
+                }
             ?>
         </div>
     </div>

@@ -33,12 +33,12 @@
             ?>
             <form enctype="multipart/form-data" method="POST" action="upload.php">
                 <input type="file" name="uploadFile" class="form-control" placeholder="search in this directory" aria-describedby="basic-addon1">
-                <input type="hidden" value="<?php echo ROOT . $path; ?>" name="path">
+                <input type="hidden" value="<?php echo $path; ?>" name="path">
                 <button class="btn btn-lg btn-default" type="submit">Upload</button>
             </form>
             <form action="search.php" method="get">
                 <input type="text" name="name" class="form-control" placeholder="search in this directory" aria-describedby="basic-addon1">
-                <input type="hidden" name="path" value="<?php echo $path; // to send path ?>" >
+                <input type="hidden" value="<?php echo $path; // to send path ?>" name="path">
                 <button class="btn btn-lg btn-default" type="submit">Search</button>
             </form>
 
@@ -47,7 +47,7 @@
                 foreach ($array as $key => $value){ // changing key to path of item
                     $tempValue = $value;
                     unset($array[$key]);
-                    $array[$value] = $value;
+                    $array[$path . '/' . $value] = $value;
                 }
                 include 'draw.php';
             ?>
