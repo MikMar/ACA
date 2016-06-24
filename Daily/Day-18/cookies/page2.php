@@ -35,7 +35,7 @@
         <div class="row">
             <div class="col-xs-12">
                 <h1 class="page-header">Template</h1>
-
+                <a  href="logout.php" class="btn-lg btn">Log Out</a>
             </div>
 
         </div>

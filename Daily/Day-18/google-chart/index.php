@@ -36,13 +36,14 @@
                     fclose($file);
 
                     for ($i=0;$i<count($array);$i++){
-                            if (isset($charArray[strlen($array[$i])])){
-                                $charArray[strlen($array[$i])]++;
+                            if (isset($charArray[$array[$i]])){
+                                $charArray[$array[$i]]++;
                             } else {
-                                $charArray[strlen($array[$i])] = 1;
+                                $charArray[$array[$i]] = 1;
                             }
                     }
-
+                    asort($charArray);
+                    $charArray = array_splice($charArray, count($charArray) - 5);
                     $countryArray = file_get_contents('https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population');
                     
 
