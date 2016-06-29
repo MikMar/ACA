@@ -1,0 +1,7 @@
+1|Mikayel|PHP
+2|Dog|Java
+4|Cucumber|Java
+5|cat|Java
+5|Mikayel|Java
+6|Poghosik|Java
+7|Seda|C++
