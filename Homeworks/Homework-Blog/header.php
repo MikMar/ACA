@@ -16,9 +16,23 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <?php
-                $array = getAll('blog_post_category');
+                $array = $tools->getAll('blog_post_category');
+                if (isset($_GET['category'])){
+                    $categoryId = $_GET['category'];
+                    $style = 'class="active"';
+                }
                 foreach ($array as $key => $value){
-                    echo '<li><a href="post.php?category=' . $value['id'] . '">' . $value['title'] . '</a></li>';
+                    if (isset($categoryId)){
+
+                        if ($value['id'] == $categoryId){
+                            echo '<li ' . $style . ' ><a href="post.php?category=' . $value['id'] . '">' . $value['title'] . '</a></li>';
+                        } else {
+                            echo '<li><a href="post.php?category=' . $value['id'] . '">' . $value['title'] . '</a></li>';
+                        }
+
+                    } else {
+                        echo '<li><a href="post.php?category=' . $value['id'] . '">' . $value['title'] . '</a></li>';
+                    }
                 }
                 ?>
             </ul>

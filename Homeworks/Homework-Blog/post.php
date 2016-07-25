@@ -21,10 +21,12 @@
 </head>
 
 <?php
-require_once 'tools.php';
+require_once 'Classes/tools.php';
+$tools = new Tools(); // to use tools methods
 include_once 'header.php';
 
 define ('ITEMS_PER_PAGE', 2);
+
 
 if(isset($_GET['category'])){
     $categoryId = $_GET['category'];
@@ -33,17 +35,17 @@ if(isset($_GET['category'])){
     } else {
         $page = 0;
     }
-    $array = getPostByCategory($categoryId, $page * ITEMS_PER_PAGE, ITEMS_PER_PAGE); // FROM, LIMIT, OFFSET
+    $array = $tools->getPostByCategory($categoryId, $page * ITEMS_PER_PAGE, ITEMS_PER_PAGE); // FROM, LIMIT, OFFSET
 
-    $sql = 'SELECT count(*) AS count FROM `rel_blog_post_category` WHERE category_id = ' . $categoryId;
-    $pageCount = ceil($conn->query($sql)->fetch_assoc()['count']/ITEMS_PER_PAGE); // post count / Items per page and ceil to upper value
+    $pageCount = $tools->getPageCount($categoryId);
 } else{
     if (isset($_GET['search'])){ // to print corresponding posts after search
         $array = [];
-        $array = search($_GET['search']);
+        $array = $tools->search($_GET['search']);
         $pageCount = count($array);
         if (count($array) == 0){
             echo '<h1 class="text-center">No result for "' . $_GET['search'] . '"</h1>';
+            echo $tools->getErrorMessage();
             die;
         }
     } else {
