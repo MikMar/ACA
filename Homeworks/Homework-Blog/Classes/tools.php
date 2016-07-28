@@ -28,7 +28,6 @@ class Tools extends Connect
      */
     public function __construct()
     {
-        parent::__construct();
         $this->errorMessage = '';
     }
 
@@ -40,7 +39,7 @@ class Tools extends Connect
     {
         try
         {
-            $statement = $this->connection->prepare($sql);
+            $statement = self::getConnection()->prepare($sql);
             $statement->execute();
             $statement->setFetchMode(PDO::FETCH_ASSOC);
             $result = $statement->fetchAll();

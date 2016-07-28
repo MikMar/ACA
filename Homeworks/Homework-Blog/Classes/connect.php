@@ -17,24 +17,38 @@ class Connect
     /**
      * @var PDO
      */
-    protected $connection;
+    private static $connection;
+
 
     /**
-     * Connection constructor.
+     * Protected constructor to prevent creating a new instance of the
+     * *Singleton* via the `new` operator from outside of this class.
      */
-    public function __construct()
+    private function __construct()
     {
-        $conn = new PDO("mysql:host=" . self::HOST . ";dbname=" .  self::DATABASE, self::USER_NAME , self::PASSWORD);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $this->connection = $conn;
+    }
+
+    /**
+     * Private clone method to prevent cloning of the instance of the
+     * *Singleton* instance.
+     *
+     * @return void
+     */
+    private function __clone()
+    {
     }
 
     /**
      * @return PDO
      */
-    public function getConnection()
+    public static function getConnection()
     {
-        return $this->connection;
+        if (self::$connection === NULL){
+            $conn = new PDO("mysql:host=" . self::HOST . ";dbname=" .  self::DATABASE, self::USER_NAME , self::PASSWORD);
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            self::$connection = $conn;
+        }
+        return self::$connection;
     }
 
 
