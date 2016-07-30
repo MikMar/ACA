@@ -8,16 +8,44 @@
 
 define('ROOT', '/home/mikayel/Desktop/ACA/Daily/Day-30/MVC/');
 
-$controller = $_GET['controller'];
-$action = $_GET['action'];
+$controller = 'home';
+$action = 'index';
+
+if (isset($_GET['controller']) && isset($_GET['action'])) {
+    $controller = $_GET['controller'];
+    $action = $_GET['action'];
+}
 
 $controller = ucfirst($controller);
 $controller .= 'Controller';
 
-require_once ROOT . 'Controller/' . $controller . '.php';
+if (file_exists( ROOT . 'Controller/' . $controller . '.php' )) {
+    require_once ROOT . 'Controller/' . $controller . '.php';
 
-$controllerObj = new $controller;
+    if (class_exists($controller)) {
+        $controllerObj = new $controller;
+        $action .= 'Action';
+        if (method_exists($controllerObj, $action)) {
 
-$action .= 'Action';
+        } else {
+            require_once ROOT . 'Controller/ErrorController.php';
+            $errorController = new ErrorController($action . ' method not found', 404);
+            $errorController->errorAction();
+            die;
+        }
+
+    } else {
+        require_once ROOT . 'Controller/ErrorController.php';
+        $errorController = new ErrorController($controller . ' class not found', 404);
+        $errorController->errorAction();
+        die;
+    }
+
+} else {
+    require_once ROOT . 'Controller/ErrorController.php';
+    $errorController = new ErrorController($controller . ' file not found', 404);
+    $errorController->errorAction();
+    die;
+}
 
 $controllerObj->$action();
