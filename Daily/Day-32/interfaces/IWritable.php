@@ -13,6 +13,6 @@
  */
 interface IWritable
 {
-    public function getJSON();
-    public function getXML();
+    public function setData($data);
+    public function getData();
 }

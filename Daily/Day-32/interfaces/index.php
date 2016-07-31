@@ -10,10 +10,6 @@ spl_autoload_register(function($class_name) {
     require $class_name . ".php";
 });
 
-$book = new Book();
-
-$book->author = 'Raffi';
-$book->title = 'Samuel';
-$book->year = 1886;
-
-echo $book->getJSON();
+$jsonWriter = new JsonWriter();
+$jsonWriter->setData(['Author' => 'Mikayel']);
+echo $jsonWriter->getData();
