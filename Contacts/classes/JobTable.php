@@ -26,7 +26,35 @@ class JobTable
         $result = $statement->fetchAll();
         return $result;
     }
+/*
+    public function getTotal($name)
+    {
+        $statement = Connection::getConnection()->prepare(
+            'SELECT `total`
+            FROM job
+            WHERE `file_name`=' . '"' . $name . '"'
+        );
+        $statement->execute();
+        $statement->setFetchMode(PDO::FETCH_ASSOC);
+        $result = $statement->fetchAll();
+        var_dump($result);
+        return $result;
+    }
 
+    public function getCurrent($name)
+    {
+        $statement = Connection::getConnection()->prepare(
+            'SELECT `current`
+            FROM job
+            WHERE `file_name`=' . '"' . $name . '"'
+        );
+        $statement->execute();
+        $statement->setFetchMode(PDO::FETCH_ASSOC);
+        $result = $statement->fetchAll();
+        var_dump($result);
+        return $result;
+    }
+*/
     public function createJob($fileName, $total)
     {
         $statement = Connection::getConnection()->prepare(

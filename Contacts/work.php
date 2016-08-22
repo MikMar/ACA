@@ -39,10 +39,9 @@ foreach ($jobs as $job) {
         $newContact->setPhone($phone);
 
         $contactTable->createContact($newContact);
+        $currentLineNumber = $file->key();
+        $jobTable->changeJobCurrent($job['id'], $currentLineNumber);
+        sleep(0.001);
     }
-
-    $currentLineNumber = $file->key();
-
-    $jobTable->changeJobCurrent($job['id'], $currentLineNumber);
 }
 

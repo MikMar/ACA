@@ -1,6 +1,6 @@
 <?php
 
-require_once 'configs/db.config.php';
+require_once '/home/mikayel/Desktop/ACA/Contacts/configs/db.config.php';
 
 class Connection
 {
