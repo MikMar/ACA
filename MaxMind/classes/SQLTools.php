@@ -58,17 +58,37 @@ class SQLTools
     public function writeGeo($array)
     {
         $sql = '
-            INSERT INTO `geo` (`ip_start`, `ip_end`, `number_start`, `number_end`, `country_code`, `country`)
-            VALUES (' .
-            ' "' . $array[0] . '",' .
-            ' "' . $array[1] . '",' .
-            ' "' . $array[2] . '",' .
-            ' "' . $array[3] . '",' .
-            ' "' . $array[4] . '",' .
-            ' "' . $array[5] . '"' .
-        ')';
+            INSERT INTO `geo` 
+            (
+              `ip_start`, 
+              `ip_end`, 
+              `number_start`, 
+              `number_end`, 
+              `country_code`, 
+              `country`
+            )
+            VALUES 
+            (
+              :ip_start,
+              :ip_end,
+              :number_start,
+              :number_end,
+              :country_code,
+              :country
+            )
+        ';
         $statement = $this->db->prepare($sql);
-        $statement->execute();
+
+        foreach ($array as $item) {
+            $statement->bindParam(':ip_start', $item[0]);
+            $statement->bindParam(':ip_end', $item[1]);
+            $statement->bindParam(':number_start', $item[2]);
+            $statement->bindParam(':number_end', $item[3]);
+            $statement->bindParam(':country_code', $item[4]);
+            $statement->bindParam(':country', $item[5]);
+
+            $statement->execute();
+        }
     }
 
     public function getCountry($ip)

@@ -12,6 +12,4 @@ while (($csv = fgetcsv($file, ',')) !== FALSE ) {
 }
 
 $sqlTools = new SQLTools(Connection::getConnection());
-foreach ($csvArray as $array) {
-    $sqlTools->writeGeo($array);
-}
+$sqlTools->writeGeo($csvArray);
