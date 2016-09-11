@@ -6,9 +6,10 @@
  * Time: 8:27 PM
  */
 $file = fopen('htmlnew.txt', 'w') or die;
-$file2 = fopen('html.txt', 'r') or die;
-while (($line = fgets($file2)) !== false) {
-    $line = "'" . rtrim($line) . "' + " . PHP_EOL;
+$read = file('html.txt');
+foreach ($read as $line) {
+    $line = str_replace(PHP_EOL, '', $line);
+    $line = "+'" . $line . "' +" . PHP_EOL;
     fwrite($file, $line);
 }
 

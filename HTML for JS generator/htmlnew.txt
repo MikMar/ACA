@@ -1,448 +1,448 @@
-'<!-- Modal -->' + 
-'    <div class="modal fade" id="myModal" role="dialog">' + 
-'        <div class="modal-dialog">' + 
-'            <!-- Modal content-->' + 
-'            <div class="modal-content text-center">' + 
-'                <div class="modal-header">' + 
-'                    <button type="button" class="close" data-dismiss="modal">&times;</button>' + 
-'                    <h4 class="modal-title">Մուտքագրեք Ձեր հեռախոսահամարը</h4>' + 
-'                </div>' + 
-'                <div class="modal-body">' + 
-'                    <form method="post" enctype="multipart/form-data" action="post.php">' + 
-'                        <input type="txt" id="_tel" name="tel" placeholder="Հեռախոսահամարը 0XXXXXXXX տեսքով" onchange="validation()" onkeyup="validation()">' + 
-'                        <button type="submit" id="_submit" class="btn btn-default" disabled="disabled">Հաստատել</button>' + 
-'                    </form>' + 
-'                </div>' + 
-'            </div>' + 
-'        </div>' + 
-'    </div>' + 
-'    <div id="_zoomedImage"></div> <!--for zoomed background -->' + 
-'    <div id="wrapper">' + 
-'        <div class="nav-wrapper">' + 
-'            <div class="container-fluid">' + 
-'' + 
-'                <nav class="navbar navbar-default navbar-inverse" role="navigation" id="_menu">' + 
-'                    <div class="container-fluid">' + 
-'                        <!-- Brand and toggle get grouped for better mobile display -->' + 
-'                        <div class="navbar-header">' + 
-'                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">' + 
-'                                <span class="sr-only">Toggle navigation</span>' + 
-'                                <span class="icon-bar"></span>' + 
-'                                <span class="icon-bar"></span>' + 
-'                                <span class="icon-bar"></span>' + 
-'                            </button>' + 
-'                            <a class="navbar-brand graf-2 orange" href="#_body">Arm Vape Shop</a>' + 
-'                        </div>' + 
-'' + 
-'                        <!-- Collect the nav links, forms, and other content for toggling -->' + 
-'                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">' + 
-'                            <ul class="nav navbar-nav">' + 
-'                                <ul class="dropdown-menu" role="menu">' + 
-'                                    <li><a href="#">Action</a></li>' + 
-'                                    <li><a href="#">Another action</a></li>' + 
-'                                    <li><a href="#">Something else here</a></li>' + 
-'                                    <li class="divider"></li>' + 
-'                                    <li><a href="#">Separated link</a></li>' + 
-'                                    <li class="divider"></li>' + 
-'                                    <li><a href="#">One more separated link</a></li>' + 
-'                                </ul>' + 
-'                                </li>' + 
-'                            </ul>' + 
-'                            <ul class="nav navbar-nav navbar-right">' + 
-'                                <li><a href="#_faq">Հ․Տ․Հ․ (F.A.Q.)</a></li>' + 
-'                                <li><a href="#_contact_us">Հետադարձ կապ</a></li>' + 
-'                                <!--<li class="dropdown">' + 
-'                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>' + 
-'                                  <ul class="dropdown-menu" role="menu">' + 
-'                                    <li><a href="#">Action</a></li>' + 
-'                                    <li><a href="#">Another action</a></li>' + 
-'                                    <li><a href="#">Something else here</a></li>' + 
-'                                    <li class="divider"></li>' + 
-'                                    <li><a href="#">Separated link</a></li>' + 
-'                                  </ul>' + 
-'                                </li> -->' + 
-'                            </ul>' + 
-'                        </div><!-- /.navbar-collapse -->' + 
-'                    </div><!-- /.container-fluid -->' + 
-'                </nav>' + 
-'' + 
-'            </div>' + 
-'            <!-- /.container -->' + 
-'        </div>' + 
-'        <!-- /.nav-wrapper -->' + 
-'' + 
-'        <div id="mainCarousel" class="carousel slide" data-ride="carousel">' + 
-'            <!-- Indicators -->' + 
-'            <ol class="carousel-indicators">' + 
-'                <li data-target="#mainCarousel" data-slide-to="0" class="active"><span>1</span></li>' + 
-'                <li data-target="#mainCarousel" data-slide-to="1">2</li>' + 
-'                <li data-target="#mainCarousel" data-slide-to="2">3</li>' + 
-'                <li data-target="#mainCarousel" data-slide-to="3">4</li>' + 
-'                <li data-target="#mainCarousel" data-slide-to="4">5</li>' + 
-'                <li data-target="#mainCarousel" data-slide-to="5">6</li>' + 
-'                <li data-target="#mainCarousel" data-slide-to="6">7</li>' + 
-'                <li data-target="#mainCarousel" data-slide-to="7">8</li>' + 
-'                <li data-target="#mainCarousel" data-slide-to="8">9</li>' + 
-'                <li data-target="#mainCarousel" data-slide-to="9">10</li>' + 
-'            </ol>' + 
-'' + 
-'            <!-- Wrapper for slides -->' + 
-'            <div class="carousel-inner" role="listbox">' + 
-'                <a href="#_amaru" class="item active">' + 
-'                    <img class="slider-img" src="img/amaru.png">' + 
-'                    <div class="carousel-caption">' + 
-'                    </div>' + 
-'                </a>' + 
-'                <a href="#_chifles" class="item">' + 
-'                    <img class="slider-img" src="img/chifles.png">' + 
-'                    <div class="carousel-caption">' + 
-'                    </div>' + 
-'                </a>' + 
-'                <a href="#_fraga" class="item">' + 
-'                    <img class="slider-img" src="img/fraga.png">' + 
-'                    <div class="carousel-caption">' + 
-'                    </div>' + 
-'                </a>' + 
-'                <a href="#_imperator" class="item">' + 
-'                    <img class="slider-img" src="img/imperator.png">' + 
-'                    <div class="carousel-caption">' + 
-'                    </div>' + 
-'                </a>' + 
-'                <a href="#_mint_party" class="item">' + 
-'                    <img class="slider-img" src="img/mint-party.png">' + 
-'                    <div class="carousel-caption">' + 
-'                    </div>' + 
-'                </a>' + 
-'                <a href="#_osk" class="item">' + 
-'                    <img class="slider-img" src="img/osk.png">' + 
-'                    <div class="carousel-caption">' + 
-'                    </div>' + 
-'                </a>' + 
-'                <a href="#_wild" class="item">' + 
-'                    <img class="slider-img" src="img/wild.png">' + 
-'                    <div class="carousel-caption">' + 
-'                    </div>' + 
-'                </a>' + 
-'                <a href="#_fury" class="item">' + 
-'                    <img class="slider-img" src="img/fury.png">' + 
-'                    <div class="carousel-caption">' + 
-'                    </div>' + 
-'                </a>' + 
-'                <a href="#_elemental" class="item">' + 
-'                    <img class="slider-img" src="img/elemental.png">' + 
-'                    <div class="carousel-caption">' + 
-'                    </div>' + 
-'                </a>' + 
-'                <a href="#_guardian" class="item">' + 
-'                    <img class="slider-img" src="img/guardian.png">' + 
-'                    <div class="carousel-caption">' + 
-'                    </div>' + 
-'                </a>' + 
-'            </div>' + 
-'        </div>' + 
-'' + 
-'' + 
-'        <div class="container">' + 
-'            <div class="section av-border text-center">' + 
-'                <h1 class="purple graf-1">ATMOSE</h1>' + 
-'            </div>' + 
-'            <div class="section">' + 
-'                <div class="row">' + 
-'                    <div class="col-md-3" id="_amaru" onmouseover="juiceBackground1()" onmouseleave="juiceBackgroundBack()">' + 
-'                        <h3 class="text-center">AMARU</h3>' + 
-'                        <a href="#" class="thumbnail">' + 
-'                            <img src="img/amaru.png">' + 
-'                        </a>' + 
-'                        <div class="av-text-container">' + 
-'                            <p>Քաղցր ծամոնի ցնցող համ հագեցած տրոպիկական մրգերի թարմությամբ</p>' + 
-'                            <p>Հեղուկը հասանելի է 2 նիկոտինային տարբերակներով․' + 
-'                                <br>' + 
-'                                0մգ (առանց նիկոտինի) և 3մգ' + 
-'                                <br>' + 
-'                                VG/PG — 70/30' + 
-'                                <br>' + 
-'                                Տարողությունը 30մլ' + 
-'                            </p>' + 
-'                        </div>' + 
-'                        <button type="button" id="_chifles" class="av-btn" data-toggle="modal" data-target="#myModal">' + 
-'                            Պատվիրել' + 
-'                        </button>' + 
-'                    </div>' + 
-'                    <div class="col-md-3" onmouseover="juiceBackground2()" onmouseleave="juiceBackgroundBack()">' + 
-'                        <h3 class="text-center">CHIFLES</h3>' + 
-'                        <a href="#" class="thumbnail">' + 
-'                            <img src="img/chifles.png">' + 
-'                        </a>' + 
-'                        <div class="av-text-container">' + 
-'                            <p>Բանանի, կրեմի և կարամելի միքսը աննկատ չի անցնի քաղցրասերների կողքով</p>' + 
-'                            <p>Հեղուկը հասանելի է 2 նիկոտինային տարբերակներով․' + 
-'                                <br>' + 
-'                                0մգ (առանց նիկոտինի) և 3մգ' + 
-'                                <br>' + 
-'                                VG/PG — 70/30' + 
-'                                <br>' + 
-'                                Տարողությունը 30մլ' + 
-'                            </p>' + 
-'                        </div>' + 
-'                        <button type="button" class="av-btn" data-toggle="modal" data-target="#myModal">' + 
-'                            Պատվիրել' + 
-'                        </button>' + 
-'                    </div>' + 
-'                    <div class="col-md-3" id="_fraga" onmouseover="juiceBackground3()" onmouseleave="juiceBackgroundBack()">' + 
-'                        <h3 class="text-center">FRAGA</h3>' + 
-'                        <a href="#" class="thumbnail">' + 
-'                            <img src="img/fraga.png">' + 
-'                        </a>' + 
-'                        <div class="av-text-container">' + 
-'                            <p>Յոգուրտի փափուկ համ հագեցած հասած ելակների թարմությամբ</p>' + 
-'                            <p>Հեղուկը հասանելի է 2 նիկոտինային տարբերակներով․' + 
-'                                <br>' + 
-'                                0մգ (առանց նիկոտինի) և 3մգ' + 
-'                                <br>' + 
-'                                VG/PG — 70/30' + 
-'                                <br>' + 
-'                                Տարողությունը 30մլ' + 
-'                            </p>' + 
-'                        </div>' + 
-'                        <button type="button" class="av-btn" data-toggle="modal" data-target="#myModal">' + 
-'                            Պատվիրել' + 
-'                        </button>' + 
-'                    </div>' + 
-'                    <div class="col-md-3" id="_imperator" onmouseover="juiceBackground4()" onmouseleave="juiceBackgroundBack()">' + 
-'                        <h3 class="text-center">IMPERATOR</h3>' + 
-'                        <a href="#" class="thumbnail">' + 
-'                            <img src="img/imperator.png">' + 
-'                        </a>' + 
-'                        <div class="av-text-container">' + 
-'                            <p>Նոր անկրկնելի կիտրոնի թխվածքի համը անմոռանալի հետք կթողի Ձեր վեյփինգի պատմության մեջ</p>' + 
-'                            <p>Հեղուկը հասանելի է 2 նիկոտինային տարբերակներով․' + 
-'                                <br>' + 
-'                                0մգ (առանց նիկոտինի) և 3մգ' + 
-'                                <br>' + 
-'                                VG/PG — 70/30' + 
-'                                <br>' + 
-'                                Տարողությունը 30մլ' + 
-'                            </p>' + 
-'                        </div>' + 
-'                        <button type="button" class="av-btn" data-toggle="modal" data-target="#myModal">' + 
-'                            Պատվիրել' + 
-'                        </button>' + 
-'                    </div>' + 
-'                    <div class="col-md-3" id="_mint_party" onmouseover="juiceBackground5()" onmouseleave="juiceBackgroundBack()">' + 
-'                        <h3 class="text-center">MINT PARTY</h3>' + 
-'                        <a href="#" class="thumbnail">' + 
-'                            <img src="img/mint-party.png">' + 
-'                        </a>' + 
-'                        <div class="av-text-container">' + 
-'                            <p>Զգա TICTAC ֊ ի հիասքանչ փարմեցնող համը</p>' + 
-'                            <p>Հեղուկը հասանելի է 2 նիկոտինային տարբերակներով․' + 
-'                                <br>' + 
-'                                0մգ (առանց նիկոտինի) և 3մգ' + 
-'                                <br>' + 
-'                                VG/PG — 70/30' + 
-'                                <br>' + 
-'                                Տարողությունը 30մլ' + 
-'                            </p>' + 
-'                        </div>' + 
-'                        <button type="button" class="av-btn" data-toggle="modal" data-target="#myModal">' + 
-'                            Պատվիրել' + 
-'                        </button>' + 
-'                    </div>' + 
-'                    <div class="col-md-3" id="_osk" onmouseover="juiceBackground6()" onmouseleave="juiceBackgroundBack()">' + 
-'                        <h3 class="text-center">OSK</h3>' + 
-'                        <a href="#" class="thumbnail">' + 
-'                            <img src="img/osk.png">' + 
-'                        </a>' + 
-'                        <div class="av-text-container">' + 
-'                            <p>Հիշու՞մ եք տատիկի թարմ պատրաստած թխվածկաբլիթների համը պատված դարչինով</p>' + 
-'                            <p>Հեղուկը հասանելի է 2 նիկոտինային տարբերակներով․' + 
-'                                <br>' + 
-'                                0մգ (առանց նիկոտինի) և 3մգ' + 
-'                                <br>' + 
-'                                VG/PG — 70/30' + 
-'                                <br>' + 
-'                                Տարողությունը 30մլ' + 
-'                            </p>' + 
-'                        </div>' + 
-'                        <button type="button" class="av-btn" data-toggle="modal" data-target="#myModal">' + 
-'                            Պատվիրել' + 
-'                        </button>' + 
-'                    </div>' + 
-'                    <div class="col-md-3" id="_wild" onmouseover="juiceBackground7()" onmouseleave="juiceBackgroundBack()">' + 
-'                        <h3 class="text-center">WILD</h3>' + 
-'                        <a href="#" class="thumbnail">' + 
-'                            <img src="img/wild.png">' + 
-'                        </a>' + 
-'                        <div class="av-text-container">' + 
-'                            <p>Սուզվիր հատապտուղների համի մեջ․ Հենց նոր քաղած հաղարճ համադրած անտառային հատապտուղների հետ և մի կաթիլ վանիլ</p>' + 
-'                            <p>Հեղուկը հասանելի է 2 նիկոտինային տարբերակներով․' + 
-'                                <br>' + 
-'                                0մգ (առանց նիկոտինի) և 3մգ' + 
-'                                <br>' + 
-'                                VG/PG — 70/30' + 
-'                                <br>' + 
-'                                Տարողությունը 30մլ' + 
-'                            </p>' + 
-'                        </div>' + 
-'                        <button type="button" class="av-btn" data-toggle="modal" data-target="#myModal">' + 
-'                            Պատվիրել' + 
-'                        </button>' + 
-'                    </div>' + 
-'                </div>' + 
-'            </div>' + 
-'            <div class="section av-border text-center" id="_mashera">' + 
-'                <h1 class="orange graf-1">MASHERA</h1>' + 
-'            </div>' + 
-'            <div class="section">' + 
-'                <div class="row">' + 
-'                    <div class="col-md-3" id="_fury" onmouseover="juiceBackground9()" onmouseleave="juiceBackgroundBack()">' + 
-'                        <h3 class="text-center">FURY MASHERA</h3>' + 
-'                        <a href="#" class="thumbnail">' + 
-'                            <img src="img/fury.png">' + 
-'                        </a>' + 
-'                        <div class="av-text-container">' + 
-'                            <p>Թարմեցնող սառնություն ամառվա շոգ օրերին համեղ խնձորի համով</p>' + 
-'                            <p>Հեղուկը հասանելի է 3 նիկոտինային տարբերակներով․' + 
-'                                <br>' + 
-'                                0մգ (առանց նիկոտինի), 1.5մգ և 3մգ' + 
-'                                <br>' + 
-'                                VG/PG — 70/30' + 
-'                                <br>' + 
-'                                Տարողությունը 30մլ' + 
-'                            </p>' + 
-'                        </div>' + 
-'                        <button type="button" class="av-btn" data-toggle="modal" data-target="#myModal">' + 
-'                            Պատվիրել' + 
-'                        </button>' + 
-'                    </div>' + 
-'                    <div class="col-md-3" id="_elemental" onmouseover="juiceBackground8()" onmouseleave="juiceBackgroundBack()">' + 
-'                        <h3 class="text-center">ELEMENTAL MASHERA</h3>' + 
-'                        <a href="#" class="thumbnail">' + 
-'                            <img src="img/elemental.png">' + 
-'                        </a>' + 
-'                        <div class="av-text-container">' + 
-'                            <p>Պաղպաղակի հիասքանչ համ թեթև վանիլի նոտաներով</p>' + 
-'                            <p>Հեղուկը հասանելի է 3 նիկոտինային տարբերակներով․' + 
-'                                <br>' + 
-'                                0մգ (առանց նիկոտինի), 1.5մգ և 3մգ' + 
-'                                <br>' + 
-'                                VG/PG — 70/30' + 
-'                                <br>' + 
-'                                Տարողությունը 30մլ' + 
-'                            </p>' + 
-'                        </div>' + 
-'                        <button type="button" class="av-btn" data-toggle="modal" data-target="#myModal">' + 
-'                            Պատվիրել' + 
-'                        </button>' + 
-'                    </div>' + 
-'                    <div class="col-md-3" id="_guardian" onmouseover="juiceBackground10()" onmouseleave="juiceBackgroundBack()">' + 
-'                        <h3 class="text-center">GUARDIAN MASHERA</h3>' + 
-'                        <a href="#" class="thumbnail">' + 
-'                            <img src="img/guardian.png">' + 
-'                        </a>' + 
-'                        <div class="av-text-container">' + 
-'                            <p>Ծամոնի, կիվիի և անտառային հատապտուղների անկրկնելի միքս</p>' + 
-'                            <p>Հեղուկը հասանելի է 3 նիկոտինային տարբերակներով․' + 
-'                                <br>' + 
-'                                0մգ (առանց նիկոտինի), 1.5մգ և 3մգ' + 
-'                                <br>' + 
-'                                VG/PG — 70/30' + 
-'                                <br>' + 
-'                                Տարողությունը 30մլ' + 
-'                            </p>' + 
-'                        </div>' + 
-'                        <button type="button" class="av-btn" data-toggle="modal" data-target="#myModal">' + 
-'                            Պատվիրել' + 
-'                        </button>' + 
-'                    </div>' + 
-'                </div>' + 
-'            </div>' + 
-'            <!-- /.section -->' + 
-'' + 
-'            <hr>' + 
-'' + 
-'            <div class="section" id="_faq">' + 
-'                <div class="row">' + 
-'                    <div class="col-md-7">' + 
-'                        <h1>Հաճախ տրվող հարցեր</h1>' + 
-'                        <p>' + 
-'                            <ul>' + 
-'                                <li>' + 
-'                        <p class="av-question">' + 
-'                            Ի՞նչ գների են Ձեր հեղուկները։' + 
-'                        </p>' + 
-'                        <p class="av_answer">' + 
-'                            Հեղուկները բերվում եմ աշխարհահռչակ ATMOSE ընկերությունից, որոնք համարվում են premium դասի հեղուկներ և 30ml վաճառվում է ընդամենը 6500-7500 ՀՀ դրամ։' + 
-'                        </p>' + 
-'                        </li>' + 
-'                        <li>' + 
-'                            <p class="av-question">' + 
-'                                Առաջացնու՞մ է արդյոք ‎վեյփը‬ կախվածություն։' + 
-'                            </p>' + 
-'                            <p class="av_answer">' + 
-'                                Վեյփը չի առաջացնում կախվածություն, իսկ ‪‎նիկոտինային‬ հեղուկները ճիշտ քանակությամբ օգտագործելու դեպքում միայն հանգստացնում են Ձեր նյարդերը։' + 
-'                            </p>' + 
-'                        </li>' + 
-'                        <li>' + 
-'                            <p class="av-question">' + 
-'                                Իսկ ունե՞ք ավելի հզոր ‎վեյփեր‬ ու ուրիշ ‎հեղուկներ։' + 
-'                            </p>' + 
-'                            <p class="av_answer">' + 
-'                                Մենք պարբերաբար թարմացնելու ենք մեր ‎վեյփերի‬ ու ‎հեղուկների‬ տեսականին։' + 
-'                            </p>' + 
-'                        </li>' + 
-'                        <li>' + 
-'                            <p class="av-question">' + 
-'                                Ի՞նչ հեղուկ ու վեյփ ընտրել, եթե նոր եմ սկսում։' + 
-'                            </p>' + 
-'                            <p class="av_answer">' + 
-'                                Մենք Ձեզ առաջարկում ենք ‪‎ոչնիկոտինային‬ հեղուկներ ու ոչ մեծ հզորության վեյփեր, որպեսզի լինի հաճելի, սովորեք ու հասկանաք դրա նշանակությունը:' + 
-'                            </p>' + 
-'                        </li>' + 
-'                        </ol>' + 
-'                        </p>' + 
-'                    </div>' + 
-'                    <div class="col-md-5">' + 
-'                        <img src="img/logo.jpg" class="img-responsive" alt="">' + 
-'                    </div>' + 
-'                </div>' + 
-'            </div>' + 
-'' + 
-'            <hr>' + 
-'' + 
-'            <div class="section text-center" id="_contact_us">' + 
-'                <div class="row">' + 
-'                    <div class="col-md-5">' + 
-'                        <h3>' + 
-'                            <span class="glyphicon glyphicon-heart red"></span>' + 
-'                            Us,' + 
-'                            <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="false"></div>' + 
-'                            ,' + 
-'                            <div class="fb-share-button" data-href="http://www.armvape.com" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">share</a></div>' + 
-'                            , Try It' + 
-'                        </h3>' + 
-'                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Farmvapeshop%2Fposts%2F134667523636512&width=500&show_text=true&height=229&appId" width="500" height="229" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>' + 
-'                    </div>' + 
-'                    <div class="col-md-7">' + 
-'' + 
-'                    </div>' + 
-'                </div>' + 
-'            </div>' + 
-'            <!-- /.section -->' + 
-'' + 
-'            <hr>' + 
-'' + 
-'            <footer>' + 
-'                <div class="copy-rights clearfix">' + 
-'                    <div class="pull-left">' + 
-'                        © Copyright Arm Vape, <?= date('Y') ?>. All rights reserved.' + 
-'                    </div>' + 
-'                </div>' + 
-'            </footer>' + 
-'' + 
-'        </div>' + 
-'        <!-- /.container -->' + 
-'' + 
-'' + 
-'    </div>' + 
-'    <!-- /#wrapper -->' + 
++'<!-- Modal -->' +
++'    <div class="modal fade" id="myModal" role="dialog">' +
++'        <div class="modal-dialog">' +
++'            <!-- Modal content-->' +
++'            <div class="modal-content text-center">' +
++'                <div class="modal-header">' +
++'                    <button type="button" class="close" data-dismiss="modal">&times;</button>' +
++'                    <h4 class="modal-title">Մուտքագրեք Ձեր հեռախոսահամարը</h4>' +
++'                </div>' +
++'                <div class="modal-body">' +
++'                    <form method="post" enctype="multipart/form-data" action="post.php">' +
++'                        <input type="txt" id="_tel" name="tel" placeholder="Հեռախոսահամարը 0XXXXXXXX տեսքով" onchange="validation()" onkeyup="validation()">' +
++'                        <button type="submit" id="_submit" class="btn btn-default" disabled="disabled">Հաստատել</button>' +
++'                    </form>' +
++'                </div>' +
++'            </div>' +
++'        </div>' +
++'    </div>' +
++'    <div id="_zoomedImage"></div> <!--for zoomed background -->' +
++'    <div id="wrapper">' +
++'        <div class="nav-wrapper">' +
++'            <div class="container-fluid">' +
++'' +
++'                <nav class="navbar navbar-default navbar-inverse" role="navigation" id="_menu">' +
++'                    <div class="container-fluid">' +
++'                        <!-- Brand and toggle get grouped for better mobile display -->' +
++'                        <div class="navbar-header">' +
++'                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">' +
++'                                <span class="sr-only">Toggle navigation</span>' +
++'                                <span class="icon-bar"></span>' +
++'                                <span class="icon-bar"></span>' +
++'                                <span class="icon-bar"></span>' +
++'                            </button>' +
++'                            <a class="navbar-brand graf-2 orange" href="#_body">Arm Vape Shop</a>' +
++'                        </div>' +
++'' +
++'                        <!-- Collect the nav links, forms, and other content for toggling -->' +
++'                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">' +
++'                            <ul class="nav navbar-nav">' +
++'                                <ul class="dropdown-menu" role="menu">' +
++'                                    <li><a href="#">Action</a></li>' +
++'                                    <li><a href="#">Another action</a></li>' +
++'                                    <li><a href="#">Something else here</a></li>' +
++'                                    <li class="divider"></li>' +
++'                                    <li><a href="#">Separated link</a></li>' +
++'                                    <li class="divider"></li>' +
++'                                    <li><a href="#">One more separated link</a></li>' +
++'                                </ul>' +
++'                                </li>' +
++'                            </ul>' +
++'                            <ul class="nav navbar-nav navbar-right">' +
++'                                <li><a href="#_faq">Հ․Տ․Հ․ (F.A.Q.)</a></li>' +
++'                                <li><a href="#_contact_us">Հետադարձ կապ</a></li>' +
++'                                <!--<li class="dropdown">' +
++'                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>' +
++'                                  <ul class="dropdown-menu" role="menu">' +
++'                                    <li><a href="#">Action</a></li>' +
++'                                    <li><a href="#">Another action</a></li>' +
++'                                    <li><a href="#">Something else here</a></li>' +
++'                                    <li class="divider"></li>' +
++'                                    <li><a href="#">Separated link</a></li>' +
++'                                  </ul>' +
++'                                </li> -->' +
++'                            </ul>' +
++'                        </div><!-- /.navbar-collapse -->' +
++'                    </div><!-- /.container-fluid -->' +
++'                </nav>' +
++'' +
++'            </div>' +
++'            <!-- /.container -->' +
++'        </div>' +
++'        <!-- /.nav-wrapper -->' +
++'' +
++'        <div id="mainCarousel" class="carousel slide" data-ride="carousel">' +
++'            <!-- Indicators -->' +
++'            <ol class="carousel-indicators">' +
++'                <li data-target="#mainCarousel" data-slide-to="0" class="active"><span>1</span></li>' +
++'                <li data-target="#mainCarousel" data-slide-to="1">2</li>' +
++'                <li data-target="#mainCarousel" data-slide-to="2">3</li>' +
++'                <li data-target="#mainCarousel" data-slide-to="3">4</li>' +
++'                <li data-target="#mainCarousel" data-slide-to="4">5</li>' +
++'                <li data-target="#mainCarousel" data-slide-to="5">6</li>' +
++'                <li data-target="#mainCarousel" data-slide-to="6">7</li>' +
++'                <li data-target="#mainCarousel" data-slide-to="7">8</li>' +
++'                <li data-target="#mainCarousel" data-slide-to="8">9</li>' +
++'                <li data-target="#mainCarousel" data-slide-to="9">10</li>' +
++'            </ol>' +
++'' +
++'            <!-- Wrapper for slides -->' +
++'            <div class="carousel-inner" role="listbox">' +
++'                <a href="#_amaru" class="item active">' +
++'                    <img class="slider-img" src="img/amaru.png">' +
++'                    <div class="carousel-caption">' +
++'                    </div>' +
++'                </a>' +
++'                <a href="#_chifles" class="item">' +
++'                    <img class="slider-img" src="img/chifles.png">' +
++'                    <div class="carousel-caption">' +
++'                    </div>' +
++'                </a>' +
++'                <a href="#_fraga" class="item">' +
++'                    <img class="slider-img" src="img/fraga.png">' +
++'                    <div class="carousel-caption">' +
++'                    </div>' +
++'                </a>' +
++'                <a href="#_imperator" class="item">' +
++'                    <img class="slider-img" src="img/imperator.png">' +
++'                    <div class="carousel-caption">' +
++'                    </div>' +
++'                </a>' +
++'                <a href="#_mint_party" class="item">' +
++'                    <img class="slider-img" src="img/mint-party.png">' +
++'                    <div class="carousel-caption">' +
++'                    </div>' +
++'                </a>' +
++'                <a href="#_osk" class="item">' +
++'                    <img class="slider-img" src="img/osk.png">' +
++'                    <div class="carousel-caption">' +
++'                    </div>' +
++'                </a>' +
++'                <a href="#_wild" class="item">' +
++'                    <img class="slider-img" src="img/wild.png">' +
++'                    <div class="carousel-caption">' +
++'                    </div>' +
++'                </a>' +
++'                <a href="#_fury" class="item">' +
++'                    <img class="slider-img" src="img/fury.png">' +
++'                    <div class="carousel-caption">' +
++'                    </div>' +
++'                </a>' +
++'                <a href="#_elemental" class="item">' +
++'                    <img class="slider-img" src="img/elemental.png">' +
++'                    <div class="carousel-caption">' +
++'                    </div>' +
++'                </a>' +
++'                <a href="#_guardian" class="item">' +
++'                    <img class="slider-img" src="img/guardian.png">' +
++'                    <div class="carousel-caption">' +
++'                    </div>' +
++'                </a>' +
++'            </div>' +
++'        </div>' +
++'' +
++'' +
++'        <div class="container">' +
++'            <div class="section av-border text-center">' +
++'                <h1 class="purple graf-1">ATMOSE</h1>' +
++'            </div>' +
++'            <div class="section">' +
++'                <div class="row">' +
++'                    <div class="col-md-3" id="_amaru" onmouseover="juiceBackground1()" onmouseleave="juiceBackgroundBack()">' +
++'                        <h3 class="text-center">AMARU</h3>' +
++'                        <a href="#" class="thumbnail">' +
++'                            <img src="img/amaru.png">' +
++'                        </a>' +
++'                        <div class="av-text-container">' +
++'                            <p>Քաղցր ծամոնի ցնցող համ հագեցած տրոպիկական մրգերի թարմությամբ</p>' +
++'                            <p>Հեղուկը հասանելի է 2 նիկոտինային տարբերակներով․' +
++'                                <br>' +
++'                                0մգ (առանց նիկոտինի) և 3մգ' +
++'                                <br>' +
++'                                VG/PG — 70/30' +
++'                                <br>' +
++'                                Տարողությունը 30մլ' +
++'                            </p>' +
++'                        </div>' +
++'                        <button type="button" id="_chifles" class="av-btn" data-toggle="modal" data-target="#myModal">' +
++'                            Պատվիրել' +
++'                        </button>' +
++'                    </div>' +
++'                    <div class="col-md-3" onmouseover="juiceBackground2()" onmouseleave="juiceBackgroundBack()">' +
++'                        <h3 class="text-center">CHIFLES</h3>' +
++'                        <a href="#" class="thumbnail">' +
++'                            <img src="img/chifles.png">' +
++'                        </a>' +
++'                        <div class="av-text-container">' +
++'                            <p>Բանանի, կրեմի և կարամելի միքսը աննկատ չի անցնի քաղցրասերների կողքով</p>' +
++'                            <p>Հեղուկը հասանելի է 2 նիկոտինային տարբերակներով․' +
++'                                <br>' +
++'                                0մգ (առանց նիկոտինի) և 3մգ' +
++'                                <br>' +
++'                                VG/PG — 70/30' +
++'                                <br>' +
++'                                Տարողությունը 30մլ' +
++'                            </p>' +
++'                        </div>' +
++'                        <button type="button" class="av-btn" data-toggle="modal" data-target="#myModal">' +
++'                            Պատվիրել' +
++'                        </button>' +
++'                    </div>' +
++'                    <div class="col-md-3" id="_fraga" onmouseover="juiceBackground3()" onmouseleave="juiceBackgroundBack()">' +
++'                        <h3 class="text-center">FRAGA</h3>' +
++'                        <a href="#" class="thumbnail">' +
++'                            <img src="img/fraga.png">' +
++'                        </a>' +
++'                        <div class="av-text-container">' +
++'                            <p>Յոգուրտի փափուկ համ հագեցած հասած ելակների թարմությամբ</p>' +
++'                            <p>Հեղուկը հասանելի է 2 նիկոտինային տարբերակներով․' +
++'                                <br>' +
++'                                0մգ (առանց նիկոտինի) և 3մգ' +
++'                                <br>' +
++'                                VG/PG — 70/30' +
++'                                <br>' +
++'                                Տարողությունը 30մլ' +
++'                            </p>' +
++'                        </div>' +
++'                        <button type="button" class="av-btn" data-toggle="modal" data-target="#myModal">' +
++'                            Պատվիրել' +
++'                        </button>' +
++'                    </div>' +
++'                    <div class="col-md-3" id="_imperator" onmouseover="juiceBackground4()" onmouseleave="juiceBackgroundBack()">' +
++'                        <h3 class="text-center">IMPERATOR</h3>' +
++'                        <a href="#" class="thumbnail">' +
++'                            <img src="img/imperator.png">' +
++'                        </a>' +
++'                        <div class="av-text-container">' +
++'                            <p>Նոր անկրկնելի կիտրոնի թխվածքի համը անմոռանալի հետք կթողի Ձեր վեյփինգի պատմության մեջ</p>' +
++'                            <p>Հեղուկը հասանելի է 2 նիկոտինային տարբերակներով․' +
++'                                <br>' +
++'                                0մգ (առանց նիկոտինի) և 3մգ' +
++'                                <br>' +
++'                                VG/PG — 70/30' +
++'                                <br>' +
++'                                Տարողությունը 30մլ' +
++'                            </p>' +
++'                        </div>' +
++'                        <button type="button" class="av-btn" data-toggle="modal" data-target="#myModal">' +
++'                            Պատվիրել' +
++'                        </button>' +
++'                    </div>' +
++'                    <div class="col-md-3" id="_mint_party" onmouseover="juiceBackground5()" onmouseleave="juiceBackgroundBack()">' +
++'                        <h3 class="text-center">MINT PARTY</h3>' +
++'                        <a href="#" class="thumbnail">' +
++'                            <img src="img/mint-party.png">' +
++'                        </a>' +
++'                        <div class="av-text-container">' +
++'                            <p>Զգա TICTAC ֊ ի հիասքանչ փարմեցնող համը</p>' +
++'                            <p>Հեղուկը հասանելի է 2 նիկոտինային տարբերակներով․' +
++'                                <br>' +
++'                                0մգ (առանց նիկոտինի) և 3մգ' +
++'                                <br>' +
++'                                VG/PG — 70/30' +
++'                                <br>' +
++'                                Տարողությունը 30մլ' +
++'                            </p>' +
++'                        </div>' +
++'                        <button type="button" class="av-btn" data-toggle="modal" data-target="#myModal">' +
++'                            Պատվիրել' +
++'                        </button>' +
++'                    </div>' +
++'                    <div class="col-md-3" id="_osk" onmouseover="juiceBackground6()" onmouseleave="juiceBackgroundBack()">' +
++'                        <h3 class="text-center">OSK</h3>' +
++'                        <a href="#" class="thumbnail">' +
++'                            <img src="img/osk.png">' +
++'                        </a>' +
++'                        <div class="av-text-container">' +
++'                            <p>Հիշու՞մ եք տատիկի թարմ պատրաստած թխվածկաբլիթների համը պատված դարչինով</p>' +
++'                            <p>Հեղուկը հասանելի է 2 նիկոտինային տարբերակներով․' +
++'                                <br>' +
++'                                0մգ (առանց նիկոտինի) և 3մգ' +
++'                                <br>' +
++'                                VG/PG — 70/30' +
++'                                <br>' +
++'                                Տարողությունը 30մլ' +
++'                            </p>' +
++'                        </div>' +
++'                        <button type="button" class="av-btn" data-toggle="modal" data-target="#myModal">' +
++'                            Պատվիրել' +
++'                        </button>' +
++'                    </div>' +
++'                    <div class="col-md-3" id="_wild" onmouseover="juiceBackground7()" onmouseleave="juiceBackgroundBack()">' +
++'                        <h3 class="text-center">WILD</h3>' +
++'                        <a href="#" class="thumbnail">' +
++'                            <img src="img/wild.png">' +
++'                        </a>' +
++'                        <div class="av-text-container">' +
++'                            <p>Սուզվիր հատապտուղների համի մեջ․ Հենց նոր քաղած հաղարճ համադրած անտառային հատապտուղների հետ և մի կաթիլ վանիլ</p>' +
++'                            <p>Հեղուկը հասանելի է 2 նիկոտինային տարբերակներով․' +
++'                                <br>' +
++'                                0մգ (առանց նիկոտինի) և 3մգ' +
++'                                <br>' +
++'                                VG/PG — 70/30' +
++'                                <br>' +
++'                                Տարողությունը 30մլ' +
++'                            </p>' +
++'                        </div>' +
++'                        <button type="button" class="av-btn" data-toggle="modal" data-target="#myModal">' +
++'                            Պատվիրել' +
++'                        </button>' +
++'                    </div>' +
++'                </div>' +
++'            </div>' +
++'            <div class="section av-border text-center" id="_mashera">' +
++'                <h1 class="orange graf-1">MASHERA</h1>' +
++'            </div>' +
++'            <div class="section">' +
++'                <div class="row">' +
++'                    <div class="col-md-3" id="_fury" onmouseover="juiceBackground9()" onmouseleave="juiceBackgroundBack()">' +
++'                        <h3 class="text-center">FURY MASHERA</h3>' +
++'                        <a href="#" class="thumbnail">' +
++'                            <img src="img/fury.png">' +
++'                        </a>' +
++'                        <div class="av-text-container">' +
++'                            <p>Թարմեցնող սառնություն ամառվա շոգ օրերին համեղ խնձորի համով</p>' +
++'                            <p>Հեղուկը հասանելի է 3 նիկոտինային տարբերակներով․' +
++'                                <br>' +
++'                                0մգ (առանց նիկոտինի), 1.5մգ և 3մգ' +
++'                                <br>' +
++'                                VG/PG — 70/30' +
++'                                <br>' +
++'                                Տարողությունը 30մլ' +
++'                            </p>' +
++'                        </div>' +
++'                        <button type="button" class="av-btn" data-toggle="modal" data-target="#myModal">' +
++'                            Պատվիրել' +
++'                        </button>' +
++'                    </div>' +
++'                    <div class="col-md-3" id="_elemental" onmouseover="juiceBackground8()" onmouseleave="juiceBackgroundBack()">' +
++'                        <h3 class="text-center">ELEMENTAL MASHERA</h3>' +
++'                        <a href="#" class="thumbnail">' +
++'                            <img src="img/elemental.png">' +
++'                        </a>' +
++'                        <div class="av-text-container">' +
++'                            <p>Պաղպաղակի հիասքանչ համ թեթև վանիլի նոտաներով</p>' +
++'                            <p>Հեղուկը հասանելի է 3 նիկոտինային տարբերակներով․' +
++'                                <br>' +
++'                                0մգ (առանց նիկոտինի), 1.5մգ և 3մգ' +
++'                                <br>' +
++'                                VG/PG — 70/30' +
++'                                <br>' +
++'                                Տարողությունը 30մլ' +
++'                            </p>' +
++'                        </div>' +
++'                        <button type="button" class="av-btn" data-toggle="modal" data-target="#myModal">' +
++'                            Պատվիրել' +
++'                        </button>' +
++'                    </div>' +
++'                    <div class="col-md-3" id="_guardian" onmouseover="juiceBackground10()" onmouseleave="juiceBackgroundBack()">' +
++'                        <h3 class="text-center">GUARDIAN MASHERA</h3>' +
++'                        <a href="#" class="thumbnail">' +
++'                            <img src="img/guardian.png">' +
++'                        </a>' +
++'                        <div class="av-text-container">' +
++'                            <p>Ծամոնի, կիվիի և անտառային հատապտուղների անկրկնելի միքս</p>' +
++'                            <p>Հեղուկը հասանելի է 3 նիկոտինային տարբերակներով․' +
++'                                <br>' +
++'                                0մգ (առանց նիկոտինի), 1.5մգ և 3մգ' +
++'                                <br>' +
++'                                VG/PG — 70/30' +
++'                                <br>' +
++'                                Տարողությունը 30մլ' +
++'                            </p>' +
++'                        </div>' +
++'                        <button type="button" class="av-btn" data-toggle="modal" data-target="#myModal">' +
++'                            Պատվիրել' +
++'                        </button>' +
++'                    </div>' +
++'                </div>' +
++'            </div>' +
++'            <!-- /.section -->' +
++'' +
++'            <hr>' +
++'' +
++'            <div class="section" id="_faq">' +
++'                <div class="row">' +
++'                    <div class="col-md-7">' +
++'                        <h1>Հաճախ տրվող հարցեր</h1>' +
++'                        <p>' +
++'                            <ul>' +
++'                                <li>' +
++'                        <p class="av-question">' +
++'                            Ի՞նչ գների են Ձեր հեղուկները։' +
++'                        </p>' +
++'                        <p class="av_answer">' +
++'                            Հեղուկները բերվում եմ աշխարհահռչակ ATMOSE ընկերությունից, որոնք համարվում են premium դասի հեղուկներ և 30ml վաճառվում է ընդամենը 6500-7500 ՀՀ դրամ։' +
++'                        </p>' +
++'                        </li>' +
++'                        <li>' +
++'                            <p class="av-question">' +
++'                                Առաջացնու՞մ է արդյոք ‎վեյփը‬ կախվածություն։' +
++'                            </p>' +
++'                            <p class="av_answer">' +
++'                                Վեյփը չի առաջացնում կախվածություն, իսկ ‪‎նիկոտինային‬ հեղուկները ճիշտ քանակությամբ օգտագործելու դեպքում միայն հանգստացնում են Ձեր նյարդերը։' +
++'                            </p>' +
++'                        </li>' +
++'                        <li>' +
++'                            <p class="av-question">' +
++'                                Իսկ ունե՞ք ավելի հզոր ‎վեյփեր‬ ու ուրիշ ‎հեղուկներ։' +
++'                            </p>' +
++'                            <p class="av_answer">' +
++'                                Մենք պարբերաբար թարմացնելու ենք մեր ‎վեյփերի‬ ու ‎հեղուկների‬ տեսականին։' +
++'                            </p>' +
++'                        </li>' +
++'                        <li>' +
++'                            <p class="av-question">' +
++'                                Ի՞նչ հեղուկ ու վեյփ ընտրել, եթե նոր եմ սկսում։' +
++'                            </p>' +
++'                            <p class="av_answer">' +
++'                                Մենք Ձեզ առաջարկում ենք ‪‎ոչնիկոտինային‬ հեղուկներ ու ոչ մեծ հզորության վեյփեր, որպեսզի լինի հաճելի, սովորեք ու հասկանաք դրա նշանակությունը:' +
++'                            </p>' +
++'                        </li>' +
++'                        </ol>' +
++'                        </p>' +
++'                    </div>' +
++'                    <div class="col-md-5">' +
++'                        <img src="img/logo.jpg" class="img-responsive" alt="">' +
++'                    </div>' +
++'                </div>' +
++'            </div>' +
++'' +
++'            <hr>' +
++'' +
++'            <div class="section text-center" id="_contact_us">' +
++'                <div class="row">' +
++'                    <div class="col-md-5">' +
++'                        <h3>' +
++'                            <span class="glyphicon glyphicon-heart red"></span>' +
++'                            Us,' +
++'                            <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="false"></div>' +
++'                            ,' +
++'                            <div class="fb-share-button" data-href="http://www.armvape.com" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">share</a></div>' +
++'                            , Try It' +
++'                        </h3>' +
++'                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Farmvapeshop%2Fposts%2F134667523636512&width=500&show_text=true&height=229&appId" width="500" height="229" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>' +
++'                    </div>' +
++'                    <div class="col-md-7">' +
++'' +
++'                    </div>' +
++'                </div>' +
++'            </div>' +
++'            <!-- /.section -->' +
++'' +
++'            <hr>' +
++'' +
++'            <footer>' +
++'                <div class="copy-rights clearfix">' +
++'                    <div class="pull-left">' +
++'                        © Copyright Arm Vape, <?= date('Y') ?>. All rights reserved.' +
++'                    </div>' +
++'                </div>' +
++'            </footer>' +
++'' +
++'        </div>' +
++'        <!-- /.container -->' +
++'' +
++'' +
++'    </div>' +
++'    <!-- /#wrapper -->' +
